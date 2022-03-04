@@ -27,7 +27,11 @@ $wine_db = $phpCrud->wine_db();
 
  ATTR('TITLE', ' PHPCurd Vanilla = Bootstrap '); 
 
- _xSTYLE(' input { width: 100%; } ');
+ _xSTYLE('
+
+   input { width: 100%; }
+  
+ ');
 
  xHEAD();
  _BODY();
@@ -63,6 +67,7 @@ $wine_db = $phpCrud->wine_db();
   $friend_id  = '';
 
  # DO INSERT / CREATE 
+
  if( $wine_db === false ) { die("ERROR: Could not connect. " . $wine_db->connect_error); }
 
  if(isset($_REQUEST['insertData']) == true ) : 
@@ -92,10 +97,12 @@ endif;
  # DO READ DATA FROM DATABASE
 
  $read = $phpCrud->wine_fetch( 'crud', [ 'mixed' => [ "SELECT * FROM  Crud ORDER BY frined_id DESC " ]  ] , 'get_all_friends'   );
-
+  
  function get_all_friends( array $read ) : array {  
     
- $friends = array(); if( $read ) { foreach ($read as $value) {  
+ $friends = array(); if( $read )  { 
+   
+  foreach ($read as $value) {  
      
      $friends[] = ELEM('tr', [ CHILD => [
 
@@ -109,7 +116,11 @@ endif;
      
      ]);
     
- }  return (array)  $friends ;  }   
+ }  return (array)  $friends ;
+
+}
+
+ return [];
 
  }
  
@@ -141,8 +152,6 @@ endif;
    
  endif;
  
- # INCASE OF UPDATE 
-
  if(isset($_REQUEST['updateData']) == true ) : 
 
     function do_update( $do_update ) { 
@@ -163,8 +172,6 @@ endif;
    ] , 'do_update' );
 
  endif;
-
- # INCASE OF DELETE 
 
  if( isset($_REQUEST['delete']) == true ) :
    
@@ -239,6 +246,7 @@ endif;
 
  xFORM(" END Of the form ");
  
+
 # DSIPLAY DATA FROM DATABASE 
 
  _div([['class'],['fluid-container']]);
