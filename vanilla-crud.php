@@ -27,11 +27,7 @@ $wine_db = $phpCrud->wine_db();
 
  ATTR('TITLE', ' PHPCurd Vanilla = Bootstrap '); 
 
- _xSTYLE('
-
-   input { width: 100%; }
-  
- ');
+ _xSTYLE(' input { width: 100%; } ');
 
  xHEAD();
  _BODY();
