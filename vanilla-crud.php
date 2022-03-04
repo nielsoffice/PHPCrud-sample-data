@@ -67,7 +67,6 @@ $wine_db = $phpCrud->wine_db();
   $friend_id  = '';
 
  # DO INSERT / CREATE 
-
  if( $wine_db === false ) { die("ERROR: Could not connect. " . $wine_db->connect_error); }
 
  if(isset($_REQUEST['insertData']) == true ) : 
@@ -146,6 +145,8 @@ endif;
    
  endif;
  
+ # INCASE OF UPDATE 
+
  if(isset($_REQUEST['updateData']) == true ) : 
 
     function do_update( $do_update ) { 
@@ -167,6 +168,8 @@ endif;
 
  endif;
 
+ # INCASE OF DELETE 
+ 
  if( isset($_REQUEST['delete']) == true ) :
    
   $deleted_friend   = $_REQUEST['delete'];
