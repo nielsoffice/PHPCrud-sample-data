@@ -98,7 +98,7 @@ endif;
 
  $read = $phpCrud->wine_fetch( 'crud', [ 'mixed' => [ "SELECT * FROM  Crud ORDER BY frined_id DESC " ]  ] , 'get_all_friends'   );
   
- function get_all_friends( array $read ) : array {  
+ function get_all_friends( $read )  {  
     
  $friends = array(); if( $read )  { 
    
