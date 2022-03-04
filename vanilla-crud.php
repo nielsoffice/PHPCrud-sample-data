@@ -169,7 +169,7 @@ endif;
  endif;
 
  # INCASE OF DELETE 
- 
+
  if( isset($_REQUEST['delete']) == true ) :
    
   $deleted_friend   = $_REQUEST['delete'];
@@ -243,7 +243,6 @@ endif;
 
  xFORM(" END Of the form ");
  
-
 # DSIPLAY DATA FROM DATABASE 
 
  _div([['class'],['fluid-container']]);
