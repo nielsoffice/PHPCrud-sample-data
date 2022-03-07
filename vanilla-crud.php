@@ -3,7 +3,7 @@
 
  use \PHPWine\VanillaFlavour\Wine\Optimizer\Html as Optimizer;
  use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers as OptimizerCare; 
- use \PHPWine\VanillaFlavour\Wine\Optimizer\FORM; 
+ use \PHPWine\VanillaFlavour\Wine\Optimizer\Form; 
  use \PHPWine\VanillaFlavour\Plugins\PHPCrud\Crud\Vanilla;
 
  $noHtml     = new Optimizer();
@@ -25,46 +25,14 @@ $wine_db = $phpCrud->wine_db();
 
  ]); 
 
- ATTR('TITLE', ' PHPCurd Vanilla = Bootstrap '); 
+ ATTR('TITLE', ' PHPCrud Vanilla : Bootstrap '); 
 
- _xSTYLE('
-
-   input { width: 100%; }
-  
- ');
+ _xSTYLE('input { width: 100%; }');
 
  xHEAD();
  _BODY();
 
  ############################################################################################### 
-
-/**
-  * @var  
-  * defined Initialized update 
-  * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
-  **/  
- $friend_name   = '';
-
-/**
-  * @var  
-  * defined Initialized update 
-  * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
-  **/  
- $friend_mobile = '';
-
-/**
-  * @var  
-  * defined Initialized update 
-  * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
-  **/  
- $friend_email  = '';
-
- /**
-  * @var  
-  * defined Initialized update 
-  * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
-  **/  
-  $friend_id  = '';
 
  # DO INSERT / CREATE 
 
@@ -72,6 +40,11 @@ $wine_db = $phpCrud->wine_db();
 
  if(isset($_REQUEST['insertData']) == true ) : 
 
+/**
+  * @var  
+  * defined Initialized update 
+  * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
+  **/  
  $friend_name   = ($_POST['friend_name'])   ?? '';
  $friend_mobile = ($_POST['friend_mobile']) ?? '';
  $friend_email  = ($_POST['friend_email'])  ?? '';
@@ -118,9 +91,8 @@ endif;
     
  }  return (array)  $friends ;
 
-}
-
- return [];
+} 
+   return [];
 
  }
  
@@ -212,20 +184,20 @@ endif;
           ['div', ATTR => ['class' => 'col-md-12'], VALUE => [ 
 
              FORM::LABEL('friend_name'   , 'Friend Name : ') . __BR()
-            .FORM::TEXT('id-friend_name' , 'class-friend_name' , [['name', 'value'] , ['friend_name', "{$friend_name}"]] )
+            .FORM::TEXT('id-friend_name' , 'class-friend_name' , [['name','value'] , ['friend_name', (($friend_name))?? '']] )
   
            ] ],
            ['div', VALUE => [ 
 
              FORM::LABEL('friend_mobile'   , 'Friend Mobile : ') . __BR()
-            .FORM::TEXT('id-friend_mobile' , 'class-friend_mobile' , [['name', 'value'] , ['friend_mobile', "{$friend_mobile}"]])
+            .FORM::TEXT('id-friend_mobile' , 'class-friend_mobile' , [['name','value'] , ['friend_mobile', (($friend_mobile)?? '')]])
   
           ] ],
           ['div', VALUE => [ 
 
-             FORM::LABEL('friend_email'   , 'Friend Email : ' ) . __BR()
-            .FORM::TEXT('id-friend_mobile', 'class-friend_mobile' , [['name', 'value'] , ['friend_email', "{$friend_email}"]])
-            .FORM::HIDDEN('id-friend_mobile', 'class-friend_mobile' , [['name', 'value'] , ['friend_id', "{$friend_id}"]])
+             FORM::LABEL('friend_email'     , 'Friend Email : ' ) . __BR()
+            .FORM::TEXT('id-friend_mobile'  , 'class-friend_mobile' , [['name','value'] , ['friend_email', (($friend_email)?? '')]])
+            .FORM::HIDDEN('id-friend_mobile', 'class-friend_mobile' , [['name','value'] , ['friend_id', (($friend_id)?? '')]])
 
          ] ],
          ['div', VALUE => [ 
@@ -245,9 +217,8 @@ endif;
   );
 
  xFORM(" END Of the form ");
- 
 
-# DSIPLAY DATA FROM DATABASE 
+# DISPLAY DATA FROM DATABASE 
 
  _div([['class'],['fluid-container']]);
    
