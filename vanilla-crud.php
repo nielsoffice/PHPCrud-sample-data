@@ -183,30 +183,30 @@ endif;
         
           ['div', ATTR => ['class' => 'col-md-12'], VALUE => [ 
 
-             FORM::LABEL('friend_name'   , 'Friend Name : ') . __BR()
-            .FORM::TEXT('id-friend_name' , 'class-friend_name' , [['name','value'] , ['friend_name', (($friend_name))?? '']] )
+             FORM::LABEL('friend_name','Friend Name : ') . __BR()
+            .FORM::TEXT('id-friend_name','class-friend_name',[['name','value'],['friend_name', (($friend_name))?? '']] )
   
            ] ],
            ['div', VALUE => [ 
 
-             FORM::LABEL('friend_mobile'   , 'Friend Mobile : ') . __BR()
-            .FORM::TEXT('id-friend_mobile' , 'class-friend_mobile' , [['name','value'] , ['friend_mobile', (($friend_mobile)?? '')]])
+             FORM::LABEL('friend_mobile','Friend Mobile : ') . __BR()
+            .FORM::TEXT('id-friend_mobile','class-friend_mobile',[['name','value'],['friend_mobile', (($friend_mobile)?? '')]])
   
           ] ],
           ['div', VALUE => [ 
 
-             FORM::LABEL('friend_email'     , 'Friend Email : ' ) . __BR()
-            .FORM::TEXT('id-friend_mobile'  , 'class-friend_mobile' , [['name','value'] , ['friend_email', (($friend_email)?? '')]])
-            .FORM::HIDDEN('id-friend_mobile', 'class-friend_mobile' , [['name','value'] , ['friend_id', (($friend_id)?? '')]])
+             FORM::LABEL('friend_email','Friend Email : ' ) . __BR()
+            .FORM::TEXT('id-friend_mobile','class-friend_mobile',[['name','value'],['friend_email', (($friend_email)?? '')]])
+            .FORM::HIDDEN('id-friend_mobile','class-friend_mobile',[['name','value'],['friend_id', (($friend_id)?? '')]])
 
          ] ],
          ['div', VALUE => [ 
 
-             DOIF($updateRequest == true  , ELEM('button' , 'Update friend' , [['type','name'],['submit','updateData']] ))
+             DOIF($updateRequest == true  , ELEM('button','Update friend',[['type','name'],['submit','updateData']] ))
             .DOIF($updateRequest == false ,  
                  
-                 FORM::BUTTONS('id-conPassword' , 'class-submit' , [['name','value'],['insertData','Submit']] ) 
-                .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset' ]] ) 
+                 FORM::BUTTONS('id-conPassword','class-submit',[['name','value'],['insertData','Submit']] ) 
+                .FORM::RESET('id-conPassword','class-submit',[['value'],['Reset' ]] ) 
              )
 
         ] ]
