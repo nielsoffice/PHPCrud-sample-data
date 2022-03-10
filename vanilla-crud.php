@@ -69,7 +69,7 @@ endif;
 
  # DO READ DATA FROM DATABASE
 
- $read = $phpCrud->wine_fetch( 'crud', [ 'mixed' => [ "SELECT * FROM  Crud ORDER BY frined_id DESC " ]  ] , 'get_all_friends'   );
+ $read = $phpCrud->wine_fetch( 'crud', [ 'mixed' => [ "SELECT * FROM  Crud ORDER BY frined_id DESC " ]  ] , 'get_all_friends' );
   
  function get_all_friends( $read )  {  
     
