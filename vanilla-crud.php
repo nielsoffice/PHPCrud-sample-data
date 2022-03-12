@@ -10,8 +10,8 @@
  $enhancer   = new OptimizerCare();
  $phpCrud    = new Vanilla();
 
-// Request vanilla public connection 
-$wine_db = $phpCrud->wine_db();
+ // Request vanilla public connection 
+ $wine_db = $phpCrud->wine_db(); 
 
  _HTML(  [['class','lang'],['no-js','']] );
  _HEAD();
