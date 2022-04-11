@@ -7,14 +7,20 @@ Create Crud with Boostrap sample data
 // SQL 
 CREATE TABLE `crud` (
 
- `frined_id` bigint(20) UNSIGNED NOT NULL,
+ `friend_id` bigint(20) UNSIGNED NOT NULL,
  `friend_name` varchar(255) NOT NULL,
  `friend_mobile` varchar(255) NOT NULL,
  `friend_email` varchar(255) NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
 
-
+```SQL
+INSERT INTO `crud` (`friend_id`, `friend_name`, `friend_mobile`, `friend_email`) VALUES
+('Nikkie The Drummer'    , '000.000.000' , 'nikki@mail.com'),
+('Marian The Base Guitar', '000.000.000' , 'marian@mail.com'),
+('Japz The Song Leader'  , '000.000.000' , 'japz@mail.com'),
+('Niel The All around'   , '000.000.000' , 'niel@mail.com');
 ```
 
 Download <a href="https://github.com/nielsofficeofficial/PHPWine"> PHPWine > </a> <br />
