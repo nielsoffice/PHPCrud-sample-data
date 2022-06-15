@@ -127,27 +127,25 @@
               * defined Initialized update 
               * NOTE ! This CRUD demo for [ PHPCrud Vanilla  ] have no include sanitation for the simplicity reason. 
               **/              
-             $this->create  = $this->vanilla->wine_creates( 'crud' , [ 
+             if( !empty( $this->create  = $this->vanilla->wine_creates( 'crud' , [ 
                  
                 'friend_name'   => '?',
                 'friend_mobile' => '?',
                 'friend_email'  => '?'
             
-             ] , "sss" , array(
+             ], "sss", array(
                     
-              trim($_POST['friend_name'])   ?? '',
-              trim($_POST['friend_mobile']) ?? '',
-              trim($_POST['friend_email'])  ?? ''
+                trim($_POST['friend_name'])   ?? '',
+                trim($_POST['friend_mobile']) ?? '',
+                trim($_POST['friend_email'])  ?? ''
             
-             )); 
-             
-             if( !empty($this->create) ) { 
+             )))) { 
 
                $_SESSION['create'] = "Last_id : " . $this->create . " Added new record! ";
                 
                header("location: vanilla-crud.php?create-succesfully"); 
             
-             } 
+            } 
 
         }
 
@@ -184,7 +182,7 @@
            
            } 
             
-           return [];
+           return []; // if there is not post return empty array! 
            
        });
    
