@@ -99,13 +99,13 @@
       $this->wine_db = $this->vanilla->wine_db();
 
       new \PHPWineVanillaFlavour\Wine\Optimizer\Html; // If incase Child element undefined constant array CHILD 
-      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; 
-      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ATTR;
-      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_DOIF;  
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_DIV;
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_UL;
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_LI;
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_FORM;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem; 
+      new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerAttr;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerDoIf;  
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlDiv;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlUl;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlLi;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlForm;
 
       $this->wine_vanilla_crud();
       $this->wine_rendred();
@@ -354,8 +354,7 @@
               
             CHILD => [  
 
-               ['div', ATTR  => ['class' => 'col-md-12']  
-                     , INNER => [ 
+               ['div', ATTR  => ['class' => 'col-md-12'], INNER => [ 
                   ['label', ATTR => [ 'type' => 'label' , 'id' => 'friend_name' ], VALUE => [ 'Friend Name : '] ],
                   ['input', ATTR => [ 
                     'type'  => 'text', 
@@ -364,8 +363,8 @@
                     'value' => ($this->friend_name?? '') 
                     ]]         
                ]],
-               ['div', ATTR => ['class' => 'col-md-12'] , INNER => [ 
-                  ['label', ATTR => [ 'type' => 'label' , 'id' => 'friend_mobile' ], VALUE => [ 'Friend Mobile : '] ],
+               ['div', ATTR => ['class' => 'col-md-12'], INNER => [ 
+                  ['label', ATTR => [ 'type' => 'label', 'id' => 'friend_mobile' ], VALUE => [ 'Friend Mobile : '] ],
                   ['input', ATTR => [ 
                         'type'  => 'text', 
                         'id'    => 'id-friend_mobile', 
@@ -373,8 +372,8 @@
                         'value' => ($this->friend_mobile?? '') 
                         ]]
                ]],
-               ['div', ATTR => ['class' => 'col-md-12'] , INNER => [ 
-                  ['label', ATTR => [ 'type' => 'label' , 'id' => 'friend_email' ], VALUE => [ 'Friend Email :'] ],
+               ['div', ATTR => ['class' => 'col-md-12'], INNER => [ 
+                  ['label', ATTR => [ 'type' => 'label', 'id' => 'friend_email' ], VALUE => [ 'Friend Email :'] ],
                   ['input', ATTR => [ 
                         'type'  => 'text', 
                         'id'    => 'id-friend_email', 
