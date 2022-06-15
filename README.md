@@ -3,7 +3,7 @@ Support PHPWine v1.2.09
 
 Create Crud with Boostrap sample data 
 
-```PHP
+```SQL
 // SQL 
 CREATE TABLE `crud` (
 
