@@ -17,10 +17,25 @@ CREATE TABLE `crud` (
 
 ```SQL
 INSERT INTO `crud` (`friend_id`, `friend_name`, `friend_mobile`, `friend_email`) VALUES
-('Nikkie The Drummer'    , '000.000.000' , 'nikki@mail.com'),
-('Marian The Base Guitar', '000.000.000' , 'marian@mail.com'),
-('Japz The Song Leader'  , '000.000.000' , 'japz@mail.com'),
-('Niel The All around'   , '000.000.000' , 'niel@mail.com');
+('Nikkie The Drummer'    , '999.999.999' , 'nikki@mail.com'),
+('Marian The Base Guitar', '999.999.999' , 'marian@mail.com'),
+('Japz The Song Leader'  , '999.999.999' , 'japz@mail.com'),
+('Niel The All around'   , '999.999.999' , 'niel@mail.com');
+```
+
+```SQL
+--
+-- Indexes for table `crud`
+--
+ALTER TABLE `crud`
+  ADD PRIMARY KEY (`friend_id`);
+  
+--
+-- AUTO_INCREMENT for table `crud`
+--
+ALTER TABLE `crud`
+  MODIFY `friend_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+COMMIT;
 ```
 
 Download <a href="https://github.com/nielsofficeofficial/PHPWine"> PHPWine > </a> <br />
