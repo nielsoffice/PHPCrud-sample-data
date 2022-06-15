@@ -23,7 +23,7 @@ COMMIT;
 ```
 
 ```SQL
-INSERT INTO `crud` (`friend_id`, `friend_name`, `friend_mobile`, `friend_email`) VALUES
+INSERT INTO `crud` (`friend_name`, `friend_mobile`, `friend_email`) VALUES
 ('Nikkie The Drummer'    , '999.999.999' , 'nikki@mail.com'),
 ('Marian The Base Guitar', '999.999.999' , 'marian@mail.com'),
 ('Japz The Song Leader'  , '999.999.999' , 'japz@mail.com'),
