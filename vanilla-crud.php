@@ -348,9 +348,7 @@
        
       print form(function()  {
 
-       return div([
-              
-            CHILD => [  
+       return div([ CHILD => [  
 
                ['div', ATTR  => ['class' => 'col-md-12'], INNER => [ 
                   ['label', ATTR => [ 'type' => 'label' , 'id' => 'friend_name' ], VALUE => [ 'Friend Name : '] ],
